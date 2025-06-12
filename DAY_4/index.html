@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY_4 TASK</title>
+</head>
+<body>
+    <nav id="header">
+        <h1>CSS Positioning</h1>
+        <ul>
+            <li><a href="#pt">Positioning</a></li>
+            <li><a href="#ps">Box-2</a></li>
+            <li><a href="#Search">Search</a></li>
+            <li><a href="#pseudo-demo">Pseudo_class</a></li>
+            <li><a href="#pseudo-bulletin">Custom-BulletIns</a></li>
+            <li><a href="#Zoom-in-out">Zoom-in-out</a></li>
+        </ul>
+    </nav>
+
+    <div class="buttons">
+        <button class="btn" onclick="location.href='../DAY_3/index.html'"><i class='fas fa-angle-double-left' style='font-size:24px'></i>  Previous(DAY_3)</button>
+        <button class="btn" onclick="location.href='../DAY_4/index.html'">Next(DAY_5)  <i class='fas fa-angle-double-right' style='font-size:24px'></i></button>
+    </div>
+
+    <div class="container">
+        <section id="pt">
+            <h1 style="font-size: 42px; font-weight: bolder;">POSITIONING - 1</h1>
+            <p style="font-weight: lighter; font-size: 16px;">Positioning is a powerful tool in CSS that allows you to control the layout of elements on a web page. It can be used to create complex designs and layouts.</p>
+            <div class="outter">
+                <div class="inner">
+                        <div class="box absolute"  style="background-color: rgb(234, 54, 51);">Box 1 - Absolute Positioning</div>
+                        <div class="box relative" style="background-color: rgb(143, 234, 83);">Box 2 - Relative Positioning</div>
+                        <div class="box sticky" style="background-color: rgb(235, 226, 48);">Box 3 - Sticky Positioning</div>
+                        <div class="box fixed" style="background-color: rgb(79, 170, 230);">Box 4 - Fixed Positioning</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ps">
+            <h1>POSITIONING - 2</h1>
+            <p>Positioning is a powerful tool in CSS that allows you to control the layout of elements on a web page. It can be used to create complex designs and layouts.</p>
+            <div class="outter_1">
+                <div class="inner_1">
+                        <div class="box absolute" style="background-color: rgb(234, 54, 51);">Box 2 - Inner</div>
+                    <div class="inner_in_1">
+                            <div class="box relative_1" style="background-color: rgb(216, 234, 51);">Box 3 - Double Inner</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Search" style="background-color: burlywood; padding:0em 28em; padding-bottom: 2em; margin: 5em 0em">
+            <h1 style="text-align: center; line-height: 2em;">SEARCH-BAR</h1>
+            <p></p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit"><i class="fa fa-search" style="font-size:24px"></i></button>
+            </div>
+        </section>
+
+        <section id="pseudo-demo">
+            <h1 style="text-align: center; line-height: 2em;">Pseudo-classes and Pseudo-elements</h1>
+            <p>CSS pseudo-classes and pseudo-elements are used to style specific parts of an element or to apply styles based on the state of an element.</p>
+            <div class="pseudo-demo">
+                <div class="pseudo-box">
+                    <p class="pseudo-text">Hover over me!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pseudo-bulletin">
+            <h1>Pseudo-bulletIns or Custom-BulletIns</h1>
+            <div class="bulletin-container">
+                <ul class="bulletin-list">
+                    <li class="bulletin-item">Batman</li>
+                    <li class="bulletin-item">Superman</li>
+                    <li class="bulletin-item">Cap</li>
+                    <li class="bulletin-item">Iron-Man</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="Zoom-in-out">
+            <h1>Zoom In and Zoom Out</h1>   
+            <p>Zooming in and out can be achieved using CSS transforms. This allows you to scale elements up or down, creating a zoom effect.</p>
+            <div class="zoom-container">
+                <div class="zoom-box">Zoom In</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
