@@ -1,0 +1,44 @@
+@import url('https://fonts.cdnfonts.com/css/netflix-font');
+                
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Netflix Font', sans-serif;
+                                                
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    z-index: -1;
+}
+
+.background{
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/7968847f-3da9-44b3-8bbb-13a46579881f/web/IN-en-20250609-TRIFECTA-perspective_32b70b51-20d4-46db-8a1a-3d5428be5f0e_large.jpg');
+    object-fit: contain;
+    min-height: 100vh;
+    z-index: 999;
+}
+
+.back-drop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.welcome{
+    min-height: 79vh;
+}
