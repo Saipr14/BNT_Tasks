@@ -12,7 +12,7 @@
 
 <style>
     body {
-        background-color: #f8f9fa;
+        background-color: #2b2b2b;
     }
 
     .outter {
@@ -21,8 +21,21 @@
     }
 
     .card {
+        overflow: hidden;
         border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px rgba(237, 229, 229, 0.9);
+    }
+
+    .card img {
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .card img:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
     }
 
     .card-title {
@@ -40,7 +53,7 @@
 <body>
 
     <div class="outter container  ">
-        <div class="h5 text-center my-3">CARDS BY BOOTSTRAP</div>
+        <div class="h5 text-center text-white my-3" style="filter:drop-shadow(0 4px 8px mintcream);">CARDS BY BOOTSTRAP</div>
 
         <div class="row">
             <div class="col-12 col-md-3 col-sm-6">
@@ -82,11 +95,7 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
-
-
 
 
 

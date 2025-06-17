@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felix | Kong Skull Island</title>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512‑{insert-integrity‑hash‑here}" crossorigin="anonymous" referrerpolicy="no‑referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Savate:ital,wght@0,200..900;1,200..900&display=swap');
+        * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Playfair Display', serif;
+    }
+        body {
+            background-color: #141414;
+            color: white;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 100vh;
+        }
+        
+        .mov-card {
+            position: relative;
+            width: 100%;
+            max-width: 24rem;
+            margin: 0 auto;
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: -2px 4px 210px 68px rgba(247, 112, 81, 0.75);
+            -webkit-box-shadow: -2px 4px 210px 68px rgba(247, 112, 81, 0.75);
+            -moz-box-shadow: -2px 4px 210px 68px rgba(247, 112, 81, 0.75);
+        }
+        
+        .mov-card .play-btn {
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 10px 17px;
+            font-size: 1.2rem;
+            color: #f77051;
+            background-color: none;
+            border: #5d0516 3px solid;
+        }
+        
+        .mov-card img {
+            object-fit: cover;
+            border-radius: 10px;
+            scroll-snap-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .mov-card .play-btn:hover {
+            background-color: #f77051;
+            color: #5d0516;
+        }
+        
+        .mov-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+            box-shadow: -2px 4px 210px 68px #5d0516;
+            -webkit-box-shadow: -2px 4px 210px 68px #5d0516;
+            -moz-box-shadow: -2px 4px 210px 68px #5d0516;
+        }
+        
+        .card-body {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .play-list .play-last:hover {
+            background-color: #f77051;
+            color: #5d0516;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .card-text {
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card mov-card">
+            <img src="./Assets/mv-1.jpg" class="card-img-top rounded" alt="...">
+            <div class="card-body">
+                <h5 class="card-title text-white">Captain America</h5>
+                <p class="card-text text-white">A thrilling action movie featuring Chris Evans in a lead role.</p>
+                <div class="play-list">
+                    <a href="#"> <button class="play-btn btn rounded-pill"><i class="fa-solid fa-play"></i></button></a>
+                    <a href="#"> <button class="play-btn btn  rounded-pill"><i class="fa-solid fa-check"></i></button></a>
+                    <a href="#"> <button class="play-btn btn  rounded-pill"><i class="fa-solid fa-thumbs-up"></i></button></a>
+                    <a href="#"> <button class="play-last play-btn btn  rounded-pill "><i class="fa-solid fa-angle-down"></i></button></a>
+                </div>
+
+                <!-- <a href=""><button class="tick btn btn-secondary rounded-pill float-end"><i class="fa-solid fa-check"></i> </button></a>
+                <a href=""><button class="tick btn btn-secondary rounded-pill float-end"><i class="fa-solid fa-check"></i> </button></a> -->
+            </div>
+        </div>
+
+</body>
+
+</html>

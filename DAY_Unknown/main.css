@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+}
+
+
+nav{
+    background-color: white ;
+    color: #333;
+    padding: 10px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 16px 45px -8px rgba(72, 72, 72, 0.75);
+    -webkit-box-shadow: 2px 16px 45px -8px rgba(55, 54, 54, 0.75);
+    -moz-box-shadow: 2px 16px 45px -8px rgba(68, 66, 66, 0.75);
+    flex-direction: row;
+    height: 72px;
+}
+
+nav h1{
+    font-size: 24px;
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav ul:last-of-type {
+    margin-right: 10px; 
+    position: relative;
+    left: 150px;
+}
+
+nav button{
+    background: #116dff;
+    color: white;
+    margin: 30px;
+    margin-left: 0;
+    padding: 10px 27px;
+    border-radius: 21px;
+    cursor: pointer;
+}
+
+.navbar_2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    align-items: center;
+    text-align: center;
+    height: 72px;
+    background-color: white ;
+    color: #333;
+    padding: 30px 48px;
+    box-shadow: 2px 16px 400px -8px rgba(87, 86, 86, 0.75);
+    -webkit-box-shadow: 2px 16px 400px -8px rgba(87, 84, 84, 0.75);
+    -moz-box-shadow: 2px 16px 400px -8px rgba(103, 100, 100, 0.75);
+}
+
+.navbar_2 h1{
+    font-size: 24px;
+}
+
+
+.navbar_2 ul{
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+}
+
+.navbar_2 ul a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+
+.navbar_2 button{
+    background: #116dff;
+    color: white;
+    margin: 30px;
+    margin-left: 0;
+    padding: 10px 27px;
+    border-radius: 21px;
+    cursor: pointer;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    background: url('./Assets/climb.png') no-repeat center center/cover;
+}
+
+
+.content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.contact{
+    background-color: #48b7b2;
+    color: white;
+    padding: 40px 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    gap:35rem;
+}
+
+.contact h2{
+    margin-bottom: 20px;
+}   
+
+.contact form{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: right;
+    gap: 15px;
+}
+
+.contact form input,
+.contact form textarea{
+    padding: 10px;
+    border: 2px black solid;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 16px;
+}   

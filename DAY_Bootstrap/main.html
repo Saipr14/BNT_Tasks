@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"  crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards Development</title>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Savate:ital,wght@0,200..900;1,200..900&display=swap');
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Playfair Display', serif;
+    }
+
+    /* Body background */
+    body {
+        background-color: #000000;
+        color: #fff;
+    }
+
+    .background{
+        background: none !important;
+        min-height: 80vh !important;
+    }
+
+    /* Top banner content css overrided*/
+    #video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #video video { 
+    height: 50vh; 
+    max-height: 100%; 
+    box-shadow: -22px -143px 273px 0px rgba(0,0,0,0.75) inset;
+    -webkit-box-shadow: -22px -143px 273px 0px rgba(0,0,0,0.75) inset;
+    -moz-box-shadow: -22px -143px 273px 0px rgba(0,0,0,0.75) inset;
+    }
+
+    #video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* optional: ensures the video covers the area */
+        display: block;
+    }
+
+    @media (max-width: 1000px) {
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+}
+}
+/* For smaller screens */
+
+@media (max-width: 768px) {
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-btn {
+    font-size: 1.5rem;
+    padding: 0.3rem 0.7rem;
+}
+
+.right-slider img {
+    max-width: 250px;
+    height: 220px;
+}
+
+.top-banner img{
+    min-height: 32rem;
+}
+}
+
+    </style>
+
+</head>
+
+<body>
+<div class="background">
+     <div id="video" style="position: absolute; z-index: -1; max-width: 100;">
+        <video class="fluid-image" src="./Assets/Captain America_ The First Avenger Trailer 2.mp4" autoplay loop></video>
+        </div>
+    <div class="container">
+       <div class="back-drop"> </div>
+        <nav class="navbar navbar-dark navbar-expand-lg bg-none px-md-5">
+            <div class="container-fluid">
+                <a class="navbar-brand fs-1" id="title" style="color: #f77051; font-weight: bolder; font-size: 9rem;"  href="#">FELIXI</a>
+                        <div class="d-flex" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-0 mx-auto mb-md-2 mb-lg-0">
+                                <li class="nav-item me-3">
+                                    <a class="nav-link " aria-current="page" href="./index.html">Home</a>
+                                </li>
+                                <li class="nav-item me-4">
+                                    <a class="nav-link active" aria-current="page" href="#">Library</a>
+                                </li>
+                                <li class="nav-item me-2">
+                                    <a href="./login.html"><button id="login" class="btn">Login</button></a>
+                                </li>
+                            </ul>
+                        </div>
+            </div>
+        </nav>
+
+ <div class="text-center welcome">
+                <h1 class="text-white" style="line-height: 4.2rem; font-size: 3rem;">Captain America: The First Avenger</h1>
+                <a href="./main.html"><button class="btn btn-lg">Watch Now ! ! !</button></a>
+            </div>
+    </div>
+</div>
+<div class="container-xxl mt-5">
+    <div class="overall">
+    <h3 id="mcu" my-3>Marvel Cinematic Universe</h3>
+    <section class="content-layer">
+    <div class="slide-container">
+        <!-- Left navigation -->
+        <a href="#img-first"><button class="nav-btn left-btn">&#10094;</button></a>
+
+        <div class="right-slider" id="slider">
+        <a href="cap1.html"><img id="img-first" src="./Assets/Av-1.jpg" alt="cap"></a>
+        <img src="./Assets/Av-2.jpg" alt="capmarvel">
+        <img src="./Assets/Av-3.jpg" alt="ironman">
+        <img src="./Assets/Av-4.jpg" alt="img1">
+        <a href="./thor.html"><img src="./Assets/Av-5.jpg" alt="img2"></a>
+        <img src="./Assets/Av-6.jpg" alt="img3">
+        <img src="./Assets/Av-7.jpg" alt="img1">
+        <img id="img-last" src="./Assets/Av-8.jpg" alt="img2">
+        </div>
+
+        <!-- Right navigation -->
+        <a href="#img-last"><button class="nav-btn right-btn">&#10095;</button></a>
+    </div>
+    </section>
+    </div>
+
+    <div class="overall">
+    <h3 my-2>DC Universe</h3>
+    <section class="content-layer">
+    <div class="slide-container">
+        <!-- Left navigation -->
+        <a href="#img-first-dc"><button class="nav-btn left-btn">&#10094;</button></a>
+
+        <div class="right-slider" id="slider">
+        <a href="sup.html"><img id="img-first" src="./Assets/dc-1.jpg" alt="cap"></a>
+        <img src="./Assets/dc-2.jpg" alt="img2">
+        <a href="./batman.html"><img src="./Assets/dc-3.jpg" alt="img3"></a>
+        <img src="./Assets/dc-4.jpg" alt="img1">
+        <img src="./Assets/dc-5.jpg" alt="img2">
+        <img src="./Assets/dc-6.jpg" alt="img3">
+        <img src="./Assets/dc-7.jpg" alt="img1">
+        <img id="img-last-dc" src="./Assets/dc-8.jpg" alt="img2">
+        </div>
+
+        <!-- Right navigation -->
+        <a href="#img-last-dc"><button class="nav-btn right-btn">&#10095;</button></a>
+    </div>
+    </section>
+    </div>
+
+    <div class="overall">
+    <h3>Transformers Universe</h3>
+    <section class="content-layer">
+    <div class="slide-container">
+        <!-- Left navigation -->
+        <a href="#img-first-tr"><button class="nav-btn left-btn">&#10094;</button></a>
+
+        <div class="right-slider" id="slider">
+        <a href="trans.html" target="topWindow"><img id="img-first" src="./Assets/tr-1.jpg" alt="cap"></a>
+        <img src="./Assets/tr-2.jpg" alt="transformer movie images">
+        <img src="./Assets/tr-3.jpg" alt="transformer movie images">
+        <img src="./Assets/tr-4.jpg" alt="transformer movie images">
+        <img src="./Assets/tr-5.jpg" alt="transformer movie images">
+        <img src="./Assets/tr-6.jpg" alt="transformer movie images">
+
+        <img id="img-last-tr" src="./Assets/tr-7.jpg" alt="transformer movie images">
+        </div>
+
+        <!-- Right navigation -->
+        <a href="#img-last-tr"><button class="nav-btn right-btn">&#10095;</button></a>
+    </div>
+    </section>
+    </div>
+
+    <div class="overall">
+    <h3>Monster-Verse</h3>
+    <section class="content-layer">
+    <div class="slide-container">
+        <!-- Left navigation -->
+        <a href="#img-first-mv"><button class="nav-btn left-btn">&#10094;</button></a>
+
+        <div class="right-slider" id="slider">
+        <a href="monver.html"><img id="img-first" src="./Assets/mv-1.jpg" alt="cap"></a>
+        <img src="./Assets/mv-2.jpg" alt="img2">
+        <img src="./Assets/mv-3.jpg" alt="img3">
+        <img src="./Assets/mv-4.jpg" alt="img1">
+        <img src="./Assets/mv-5.jpg" alt="img2">
+        <img src="./Assets/mv-6.jpg" alt="img3">
+        <img id="img-last-mv" src="./Assets/mv-7.jpg" alt="img2">
+        </div>
+
+        <!-- Right navigation -->
+        <a href="#img-last-mv"><button class="nav-btn right-btn">&#10095;</button></a>
+    </div>
+    </section>
+    </div>
+</div>
+
+<div class="text-center container p-5">
+    <div class="footer ">© 2025 Felixi All Right Reserved. Designed & Developed by</div>
+</div>
+
+</body>
+
+</html>
