@@ -1,0 +1,28 @@
+openTab(){
+    window.open('link/url');	
+}
+
+widthHeight(){
+    window.innerWidth();
+    window.innerHeight();
+}
+
+reloadPage(){
+    window.reload();
+}
+
+timeOut(){
+    setTimeout(() =>{
+	alert("2 seconds passed");
+	})
+}
+
+interval(){
+	setInterval(() =>{
+		console.log("Reapeating every 3 seconds")
+	})
+}
+
+scrollIng(){
+	scrollTo(From:0, To:0);
+}

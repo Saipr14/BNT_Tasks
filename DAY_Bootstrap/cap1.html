@@ -29,10 +29,9 @@
             width: 100%;
             max-width: 24rem;
             margin: 0 auto;
-            background-color: #1c1c1c;
+            background-color: #000000;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -78,7 +77,7 @@
             bottom: 0;
             width: 100%;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.911);
             border-radius: 0 0 10px 10px;
         }
         
@@ -97,6 +96,21 @@
             font-size: 1rem;
             color: #555;
         }
+
+        .dropdown-menu {
+            background-color:#5d0516;
+            color: #f77051;
+        } 
+
+        .dropdown-item{
+            color: #f77051;
+            background-color: #5d0516;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f77051;
+            color: #5d0516;
+        }
     </style>
 </head>
 
@@ -107,12 +121,17 @@
             <img src="./Assets/av-1card.jpg" class="card-img-top rounded" alt="...">
             <div class="card-body">
                 <h5 class="card-title text-white">Captain America</h5>
-                <p class="card-text text-white">A thrilling action movie featuring Chris Evans in a lead role.</p>
+                <p class="card-text text-start text-white">Steve Rogers, a rejected military soldier, transforms into Captain America after taking a dose of a "Super-Soldier serum". But being Captain America comes at a price as he attempts to take down a warmonger and a terrorist organization.</p>
                 <div class="play-list">
                     <a href="#"> <button class="play-btn btn rounded-pill"><i class="fa-solid fa-play"></i></button></a>
-                    <a href="#"> <button class="play-btn btn  rounded-pill"><i class="fa-solid fa-check"></i></button></a>
                     <a href="#"> <button class="play-btn btn  rounded-pill"><i class="fa-solid fa-thumbs-up"></i></button></a>
-                    <a href="#"> <button class="play-last play-btn btn  rounded-pill "><i class="fa-solid fa-angle-down"></i></button></a>
+                    <button class="play-last play-btn btn  rounded-pill dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-language"></i><button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">Tamil</a></li>
+                            <li><a class="dropdown-item" href="#">Hindi</a></li>
+                            <li><a class="dropdown-item" href="#">Telugu</a></li>
+                        </ul>
                 </div>
 
                 <!-- <a href=""><button class="tick btn btn-secondary rounded-pill float-end"><i class="fa-solid fa-check"></i> </button></a>

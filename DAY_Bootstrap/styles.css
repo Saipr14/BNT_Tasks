@@ -138,14 +138,14 @@ html, body {
 
 
 .nav-btn {
-    background-color: #5d0516;
+    background-color: transparent;
+    min-height: 90%;
     border: none;
     color: #f77051;
     font-size: 2rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
     z-index: 10;
-    border-radius: 50%;
     transition: background-color 0.3s;
     opacity: 0.7;
 }
@@ -158,15 +158,17 @@ html, body {
 .left-btn {
     position: absolute;
     left: 0;
-    bottom: 7.8rem;
+    bottom: 1rem;
     margin-right: 0.5rem;
+    border-radius: 10px 0px 0px 11px;
 }
 
 .right-btn {
     position: absolute;
     right: 0;
-    bottom: 7.8rem;
+    bottom: 1rem;
     margin-left: 0.5rem;
+    border-radius: 10px 0px 0px 11px;
 }
 
 
@@ -176,16 +178,16 @@ html, body {
         border-radius: 5%;
         transition: transform 0.3s ease;
         flex-shrink: 0;
-        font-family: inherit;
+        background: #5d0516;
+        background: linear-gradient(315deg,#5d0516 0%, #f77051 80%);
+        background: -webkit-linear-gradient(315deg,#5d0516 0%, #f77051 80%);
+        background: -moz-linear-gradient(315deg,#5d0516 0%, #f77051 80%);
     }
 
 .midcard:hover{
         transform: scale(1.1);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        background: #5d0516;
-        background: linear-gradient(315deg,#5d0516 0%, #f77051 80%);
-        background: -webkit-linear-gradient(315deg,#5d0516 0%, #f77051 80%);
-        background: -moz-linear-gradient(315deg,#5d0516 0%, #f77051 80%);
+
     }
 
 /* login page */
@@ -193,8 +195,6 @@ html, body {
 .sheet {
   background-color: #5d0517bb;
   border-radius: 16px;
-  box-shadow: 5px 10px 10px #f77051;
-  
 }
 
 form input {
@@ -254,7 +254,6 @@ form input {
     color: #5d0516;
     background-color:  #f77051;
     transition: background-color 0.3s ease;
-
 }
 
 .welcome_1 button:hover{

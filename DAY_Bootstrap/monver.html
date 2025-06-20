@@ -85,7 +85,7 @@
             bottom: 0;
             width: 100%;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color:  rgba(0, 0, 0, 0.911);
             border-radius: 0 0 10px 10px;
         }
         
@@ -104,6 +104,21 @@
             font-size: 1rem;
             color: #555;
         }
+
+        .dropdown-menu {
+            background-color:#5d0516;
+            color: #f77051;
+        } 
+
+        .dropdown-item{
+            color: #f77051;
+            background-color: #5d0516;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f77051;
+            color: #5d0516;
+        }
     </style>
 </head>
 
@@ -113,13 +128,18 @@
         <div class="card mov-card">
             <img src="./Assets/mv-1.jpg" class="card-img-top rounded" alt="...">
             <div class="card-body">
-                <h5 class="card-title text-white">Captain America</h5>
-                <p class="card-text text-white">A thrilling action movie featuring Chris Evans in a lead role.</p>
+                <h5 class="card-title text-white">Kong Skull Island</h5>
+                <p class="card-text text-white">After the Vietnam war, a team of scientists explores an uncharted island in the Pacific, venturing into the domain of the mighty Kong and must fight to escape a primal Eden.</p>
                 <div class="play-list">
                     <a href="#"> <button class="play-btn btn rounded-pill"><i class="fa-solid fa-play"></i></button></a>
-                    <a href="#"> <button class="play-btn btn  rounded-pill"><i class="fa-solid fa-check"></i></button></a>
                     <a href="#"> <button class="play-btn btn  rounded-pill"><i class="fa-solid fa-thumbs-up"></i></button></a>
-                    <a href="#"> <button class="play-last play-btn btn  rounded-pill "><i class="fa-solid fa-angle-down"></i></button></a>
+                    <button class="play-last play-btn btn  rounded-pill dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-language"></i><button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">Tamil</a></li>
+                            <li><a class="dropdown-item" href="#">Hindi</a></li>
+                            <li><a class="dropdown-item" href="#">Telugu</a></li>
+                        </ul>
                 </div>
 
                 <!-- <a href=""><button class="tick btn btn-secondary rounded-pill float-end"><i class="fa-solid fa-check"></i> </button></a>

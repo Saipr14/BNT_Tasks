@@ -55,33 +55,33 @@
     }
 
     @media (max-width: 1000px) {
-.navbar-nav{
-    display: flex;
-    flex-direction: row;
-}
-}
+    .navbar-nav{
+        display: flex;
+        flex-direction: row;
+    }
+    }
 /* For smaller screens */
 
-@media (max-width: 768px) {
-.navbar-nav{
-    display: flex;
-    flex-direction: row;
-}
+    @media (max-width: 768px) {
+    .navbar-nav{
+        display: flex;
+        flex-direction: row;
+    }
 
-.nav-btn {
-    font-size: 1.5rem;
-    padding: 0.3rem 0.7rem;
-}
+    .nav-btn {
+        font-size: 1.5rem;
+        padding: 0.3rem 0.7rem;
+    }
 
-.right-slider img {
-    max-width: 250px;
-    height: 220px;
-}
+    .right-slider img {
+        max-width: 250px;
+        height: 220px;
+    }
 
-.top-banner img{
-    min-height: 32rem;
-}
-}
+    .top-banner img{
+        min-height: 32rem;
+    }
+    }
 
     </style>
 
@@ -89,7 +89,7 @@
 
 <body>
 <div class="background">
-     <div id="video" style="position: absolute; z-index: -1; max-width: 100;">
+     <div id="video" style="position: absolute; z-index: -1;">
         <video class="fluid-image" src="./Assets/Captain America_ The First Avenger Trailer 2.mp4" autoplay loop></video>
         </div>
     <div class="container">
@@ -97,20 +97,23 @@
         <nav class="navbar navbar-dark navbar-expand-lg bg-none px-md-5">
             <div class="container-fluid">
                 <a class="navbar-brand fs-1" id="title" style="color: #f77051; font-weight: bolder; font-size: 9rem;"  href="#">FELIXI</a>
-                        <div class="d-flex" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-0 mx-auto mb-md-2 mb-lg-0">
-                                <li class="nav-item me-3">
-                                    <a class="nav-link " aria-current="page" href="./index.html">Home</a>
-                                </li>
-                                <li class="nav-item me-4">
-                                    <a class="nav-link active" aria-current="page" href="#">Library</a>
-                                </li>
-                                <li class="nav-item me-2">
-                                    <a href="./login.html"><button id="login" class="btn">Login</button></a>
-                                </li>
-                            </ul>
-                        </div>
-            </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="color: #5d0516"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-0 mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item me-2">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item me-2">
+                                <a class="nav-link" href="#">Library</a>
+                            </li>
+                            <li class="nav-item me-2">
+                                <a href="./login.html"> <button id="login" class="btn">Login</button></a>
+                            </li>
+                        </ul>
+                    </div>
+             </div>
         </nav>
 
  <div class="text-center welcome">
@@ -135,7 +138,7 @@
         <a href="./thor.html"><img src="./Assets/Av-5.jpg" alt="img2"></a>
         <img src="./Assets/Av-6.jpg" alt="img3">
         <img src="./Assets/Av-7.jpg" alt="img1">
-        <img id="img-last" src="./Assets/Av-8.jpg" alt="img2">
+        <img id="#img-last" src="./Assets/Av-8.jpg" alt="img2">
         </div>
 
         <!-- Right navigation -->
@@ -152,7 +155,7 @@
         <a href="#img-first-dc"><button class="nav-btn left-btn">&#10094;</button></a>
 
         <div class="right-slider" id="slider">
-        <a href="sup.html"><img id="img-first" src="./Assets/dc-1.jpg" alt="cap"></a>
+        <a href="sup.html"><img id="img-first-dc" src="./Assets/dc-1.jpg" alt="cap"></a>
         <img src="./Assets/dc-2.jpg" alt="img2">
         <a href="./batman.html"><img src="./Assets/dc-3.jpg" alt="img3"></a>
         <img src="./Assets/dc-4.jpg" alt="img1">
@@ -176,14 +179,13 @@
         <a href="#img-first-tr"><button class="nav-btn left-btn">&#10094;</button></a>
 
         <div class="right-slider" id="slider">
-        <a href="trans.html" target="topWindow"><img id="img-first" src="./Assets/tr-1.jpg" alt="cap"></a>
+        <a href="trans.html" target="topWindow"><img id="img-first-tr" src="./Assets/tr-1.jpg" alt="cap"></a>
         <img src="./Assets/tr-2.jpg" alt="transformer movie images">
         <img src="./Assets/tr-3.jpg" alt="transformer movie images">
         <img src="./Assets/tr-4.jpg" alt="transformer movie images">
         <img src="./Assets/tr-5.jpg" alt="transformer movie images">
         <img src="./Assets/tr-6.jpg" alt="transformer movie images">
-
-        <img id="img-last-tr" src="./Assets/tr-7.jpg" alt="transformer movie images">
+        <img id="#img-last-tr" src="./Assets/tr-7.jpg" alt="transformer movie images">
         </div>
 
         <!-- Right navigation -->
@@ -200,7 +202,7 @@
         <a href="#img-first-mv"><button class="nav-btn left-btn">&#10094;</button></a>
 
         <div class="right-slider" id="slider">
-        <a href="monver.html"><img id="img-first" src="./Assets/mv-1.jpg" alt="cap"></a>
+        <a href="monver.html"><img id="img-first-mv" src="./Assets/mv-1.jpg" alt="cap"></a>
         <img src="./Assets/mv-2.jpg" alt="img2">
         <img src="./Assets/mv-3.jpg" alt="img3">
         <img src="./Assets/mv-4.jpg" alt="img1">

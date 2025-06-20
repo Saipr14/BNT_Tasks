@@ -86,7 +86,7 @@
             bottom: 0;
             width: 100%;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color:  rgba(0, 0, 0, 0.911);
             border-radius: 0 0 10px 10px;
         }
         
@@ -105,6 +105,21 @@
             font-size: 1rem;
             color: #555;
         }
+
+        .dropdown-menu {
+            background-color:#5d0516;
+            color: #f77051;
+        } 
+
+        .dropdown-item{
+            color: #f77051;
+            background-color: #5d0516;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f77051;
+            color: #5d0516;
+        }
     </style>
 </head>
 
@@ -118,9 +133,14 @@
                 <p class="card-text text-white">The powerful but arrogant god Thor is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.</p>
                 <div class="play-list">
                     <a href="#"> <button class="play-btn btn rounded-pill"><i class="fa-solid fa-play"></i></button></a>
-                    <a href="#"> <button class="play-btn btn  rounded-pill"><i class="fa-solid fa-check"></i></button></a>
                     <a href="#"> <button class="play-btn btn  rounded-pill"><i class="fa-solid fa-thumbs-up"></i></button></a>
-                    <a href="#"> <button class="play-last play-btn btn  rounded-pill "><i class="fa-solid fa-angle-down"></i></button></a>
+                    <button class="play-last play-btn btn  rounded-pill dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-language"></i><button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">Tamil</a></li>
+                            <li><a class="dropdown-item" href="#">Hindi</a></li>
+                            <li><a class="dropdown-item" href="#">Telugu</a></li>
+                        </ul>
                 </div>
 
                 <!-- <a href=""><button class="tick btn btn-secondary rounded-pill float-end"><i class="fa-solid fa-check"></i> </button></a>

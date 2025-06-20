@@ -254,8 +254,10 @@ body{
 }
 
 #video video { 
-    height: 50vh; 
+    height: 100vh; 
     max-height: 100%; 
+    width: 100vw;
+    object-fit: fill;
 }
 
 .next #next_but,#previous_but{
