@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>JQuery Functions</title>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .container{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem 4.5rem;
+    }
+
+    .contents p{
+        margin-top: 2rem;
+    }   
+
+    form label,input{
+        font-size: 1.2rem;
+        padding: 0.4rem;
+    }
+
+    .buttonSet {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 1em;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #btn1,#btn2,#fbt{
+        background-color: rgb(200, 65, 35);
+        border-radius: 5%;
+        color: aliceblue;
+    }
+    #btn1:hover,#btn2:hover,#fbt:hover{
+        background-color: rgb(232, 46, 21);
+        color: rgb(235, 230, 230);
+        box-shadow: 9px 10px 330px 6px rgba(0,0,0,0.75);
+    }
+    #btn3,#btn4,#btn5{
+        background-color: rgb(16, 149, 52);
+        border-radius: 5%;
+        color: aliceblue;
+    }
+
+    #btn3:hover,#btn4:hover,#btn5:hover{
+        background-color: rgb(3, 137, 19);
+        color: rgb(0, 0, 0);
+       box-shadow: 9px 10px 330px 6px rgba(0,0,0,0.75);
+    }
+
+    .box{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: auto 0;
+        background-color: rgba(227, 33, 33, 0.768);
+    }
+
+    .box.borderRadius{
+        border-radius: 20px;   
+        background: rgb(5, 212, 81);
+    }
+
+    .box.border{
+        border: 4px solid black;
+        background: rgb(5, 212, 81);
+        box-shadow: -2px -2px 200px -28px rgba(0,0,0,0.75) inset;
+    }    
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="contents" style="text-align: center;">
+            <h2>JQuey Get & Set Functions</h2>
+            <p class="para">This text is just a placeholder <em>even in italic</em>, I am a paragraph</p>
+            <p class="p2"></p>
+        </div>
+            <div class="forms">
+                <form action="">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" placeholder="Enter your name...."  required><br>
+
+                </form>
+            </div>
+
+
+        <div class="buttonSet">
+            <button id="btn1" type="button" style="margin: 1rem 1.2rem;">Text function</button>
+            <button id="btn2" type="button" style="margin: 1rem 1.2rem;">HTML function</button>
+            <button type="button" id="fbt" style="margin: 1rem 1.2rem;">Form Value Get</button><br>
+            <button id="btn3" type="button">Set Value(1<sup>st</sup> Para)</button>
+            <button id="btn4" type="button">Adding a New Para</button>
+            <button id="btn5" type="button">Setting value for Name</button>
+        </div>
+    </div>
+
+<div class="container">
+    <h2 style="text-align: center;">See the Animation and class addition here</h2>
+    <div class="box" ></div>
+    <div>
+        <button id="box-btn-more" style="position: relative; left: 35%;">+</button>
+        <button id="box-btn-less" style="position: relative; left: 35%;">-</button><br><br>
+        <button id="box-btn-border">Add/Remove(Click/Double-Click) Border</button>
+        <button id="box-btn-radius">Toggle border radius</button>
+    </div>
+
+</div>
+
+<div class="container">
+    <h2>Try-catch-finally Example</h2>
+    <button onclick="runExample()">Run Example</button>
+    <p id="output"></p>
+</div>
+<script>
+//Get and Set functions
+    $(document).ready(function(){
+    //Getting Values
+        $("#btn1").click(function(){
+            alert("Text: "+ $(".para").text());
+        });
+        $("#btn2").click(function(){
+            alert("HTML: "+ $(".para").html());
+        });
+
+        $("#fbt").click(function(){
+            if($('name').val() == 'undefined'){
+                alert("No Name Submitted.......");
+            }
+            else{
+                alert("Form Value Submitted: "+ $('#name').val());
+            }
+            
+        })
+    //Setting Values
+        $("#btn3").click(function(){
+            $(".para").text("Hey you their, from JQuery!");
+        });
+        $("#btn4").click(function(){
+            $(".p2").html("<strong>I am a New Paragraph........</strong>");
+        });
+        $("#btn5").click(function(){
+            $('#name').val("Donald Fisher");
+        })
+
+    //Animate
+    $('#box-btn-more').click(function(){
+        let box = $(".box");
+        var currHeight = box.height();
+        if(currHeight<=360){
+            box.animate({
+            height:'+=120px',
+            width:'+=130px'
+          });
+        }
+        else{
+            for(let i=0; i<3; i++) {
+                box.animate({left: '-10px'}, 50)
+                .animate({left: '10px'}, 50);
+                }
+           box.animate({left: '0px'}, 50);
+            }
+    });
+    
+    $('#box-btn-less').click(function(){
+         let box = $(".box");
+        var currHeight = box.height();
+        console.log(currHeight);
+        if(currHeight>80){
+            box.animate({
+            height:'-=120px',
+            width:'-=130px'
+          });
+        }
+        else{
+            for(let i=0; i<3; i++) {
+                box.animate({left: '-10px'}, 50)
+                .animate({left: '10px'}, 50);
+                }
+            box.animate({left: '0px'}, 50);
+            }
+    });
+
+    $('#box-btn-border').click(function(){
+        $(".box").addClass('border')
+    });
+
+    $('#box-btn-border').dblclick(function(){
+        $(".box").removeClass   ('border')
+    });
+
+    $('#box-btn-radius').click(function(){
+        $(".box").toggleClass('borderRadius')
+    });
+});
+
+//Function vs Arrow Function
+
+//this keyword
+    console.log("This Keyword in Function and Arrow Function");
+    const obj = {
+    name: "John",
+    regular: function () {
+        console.log("Regular:", this.name);
+    },
+    arrow: () => {
+        console.log("Arrow:", this.name);
+    }
+    };
+
+    obj.regular();
+    obj.arrow(); 
+
+//arguments
+    console.log("Arguments in Function and Arrow Function");
+    function normal(){
+        console.log(arguments);
+    }
+
+    const arrow = () =>{
+        console.log(arguments)
+    }
+    normal(1,2,3);
+   // arrow(1,2,3);
+//Map
+    const nums = [1, 2, 3];
+    const doubled = nums.map(n => n * 2);
+    console.log("The map function turns an array into a map and we have certain set of map functions.");
+    console.log(doubled);
+//filter
+    const evens = nums.filter(n => n % 2 === 0);
+    console.log("The filter function is used when you want to remove unwanted elements based on a test.");
+    console.log(evens);
+//reduce
+    const even_sum = nums.reduce((acc, curr) => curr%3 ? acc+curr : acc,0);
+    console.log("The reduce method combines array elements into one, as per the requirement.");
+    console.log(even_sum);
+
+//try catch
+function runExample() {
+    let output = document.getElementById("output");
+    let n = 0;
+    try {
+        let result = 12/n ;
+        output.textContent = "Result: " + result;
+    } catch (err) {
+        output.textContent = "Caught error: " + err.message;
+    } finally {
+        output.textContent += " (Finally block always runs)";
+    }
+}
+</script>
+
+</body>
+</html>

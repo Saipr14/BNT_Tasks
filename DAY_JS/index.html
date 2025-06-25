@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+    #stopwatch {
+        text-align: center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    #display {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    button {
+        padding: 10px 15px;
+        font-size: 1em;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .thiskword{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .thiskword 
+
+    button.clicked {
+            background: #ff2e2e;
+        }
+     .counter {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .controls button {
+            font-size: 1rem;
+            padding: 8px 18px;
+            margin: 0 8px;
+            border-radius: 5px;
+            border: none;
+            background: #2e2eff;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .controls button:hover {
+            background: #1a1a99;
+        }
+
+
+</style>
+</head>
+<body>
+    <div id="stopwatch">
+        <div id="display">
+            <h2>STOPWATCH</h2>
+                <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>:<span id="ms">00</span>
+        </div>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+    </div>
+    <div class="thiskword" onmouseover="thisk()">
+        <h2>Click any button to see <em>this</em> in action</h2>
+        <div class="buttongrp">
+            <button id="bt1">Button 1</button>
+            <button id="bt2">Button 2</button>
+            <button id="bt3">Button 3</button>
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
+
+
+

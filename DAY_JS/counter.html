@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .counter {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .controls button {
+            font-size: 1rem;
+            padding: 8px 18px;
+            margin: 0 8px;
+            border-radius: 5px;
+            border: none;
+            background: #2e2eff;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .controls button:hover {
+            background: #1a1a99;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter" id="display">0</div>
+    <div class="controls">
+        <button id="increment">+</button>
+        <button id="decrement">-</button>
+        <button id="reset">Reset</button>
+        <button id="start-reverse">Start Reverse</button>
+    </div>
+    <script>
+        let count = 0;
+        let reverseInterval = null;
+
+        function updateDisplay() {
+            document.getElementById("display").textContent = count;
+        }
+
+        document.getElementById("increment").onclick = function() {
+            count++;
+            updateDisplay();
+        };
+
+        document.getElementById("decrement").onclick = function() {
+            count--;
+            updateDisplay();
+        };
+
+        document.getElementById("reset").onclick = function() {
+            count = 0;
+            updateDisplay();
+            if (reverseInterval) {
+                clearInterval(reverseInterval); 
+                reverseInterval = null;
+            }
+        };
+
+        document.getElementById("start-reverse").onclick = function() {
+            if (reverseInterval) return;
+            reverseInterval = setInterval(function() {
+                if (count > 0) {
+                    count--;
+                    updateDisplay();
+                } else {
+                    clearInterval(reverseInterval);
+                    reverseInterval = null;
+                }
+            }, 500);
+        };
+
+        updateDisplay();
+    </script>
+</body>
+</html>
