@@ -60,7 +60,7 @@
 function thisk(){
             document.querySelectorAll('button').forEach(function(btn) {
             btn.onclick = function() {
-               console.log(btn.value);
+               //console.log(btn.value);
                 this.classList.toggle('clicked');
                 this.textContent = this.classList.contains('clicked') ? "Clicked!" : "Button";
             };

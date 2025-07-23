@@ -1,0 +1,134 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* App container */
+.app {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.app h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Task Input Area */
+.task-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.task-input button {
+  padding: 10px 16px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.task-input button:hover {
+  background-color: #0056b3;
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: background 0.2s ease;
+}
+
+.task-item:hover {
+  background-color: #f1f1f1;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 18px;
+  color: #333;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Task buttons */
+.task-buttons button {
+  margin-left: 10px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.task-buttons .toggle {
+  background-color: #28a745;
+  color: white;
+}
+
+.task-buttons .toggle:hover {
+  background-color: #1e7e34;
+}
+
+.task-buttons .delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.task-buttons .delete:hover {
+  background-color: #b52a37;
+}
+
+.addTask {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.taskList{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
